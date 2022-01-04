@@ -1,0 +1,106 @@
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: #283d3b; 
+  }
+
+.cont{
+    background-color: #ee6c4d;
+    max-width: 35%;
+    margin: auto ;
+    border-radius: 10px;
+    box-shadow: 2px 3px 15px 3px rgba(0,0,0,0.36);
+}
+
+h1{
+    background-color: yellowgreen;
+    color: cornsilk;
+    text-align: center;
+    box-shadow: 2px 3px 8px 0px rgba(0,0,0,0.18);
+    border-radius: 10px;
+}
+
+
+.box{
+    border-radius: 10px;
+    text-align: center;
+    padding-right: 15px;
+    height: fit-content;
+}
+
+.y{
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px;
+    background-color: grey;
+    color: white;
+    box-shadow: 2px 3px 8px 0px rgba(0,0,0,0.18);
+    display: flex;
+
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #d61616;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+.form {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  min-width: fit-content;
+  min-height: fit-content;
+  border-radius: 9px;
+  border: none;
+  background-color: lightgreen;
+  box-shadow: 2px 3px 8px 0px rgba(0,0,0,0.18);
+  margin-left: 5px;
+}
+
+.add_inp{
+    justify-content: space-between;
+    border-top:5px solid lightyellow;
+
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: black;
+  border-radius: 5px;
+  background: white;
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 9px;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 360px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 black;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
