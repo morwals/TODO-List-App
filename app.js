@@ -13,7 +13,11 @@ app.use(express.static("public"));
 var admin=process.env.USER;
 var pass=process.env.PASS;
 
-mongoose.connect("mongodb+srv://admin-"+admin+":"+pass+"@cluster0.quz7a.mongodb.net/todolistDB");
+mongoose.connect("mongodb+srv://admin-"+admin+":"+pass+"@cluster0.quz7a.mongodb.net/todolistDB").then(data=>{
+    console.log("db connected")
+}).catch(err=>{
+    console.log("error in db");
+})
 
 // mongoose.connect("mongodb://localhost:27017/todolistDB").then(()=>console.log("db connected"));
 
@@ -51,7 +55,7 @@ app.get("/",function(req,res){
 
             res.redirect("/");
         }else{
-        res.render("list",{kindofday: "MORWAL", newitem: founditems});
+        res.render("list",{heading: "MORWAL", newitem: founditems});
         }
     });
     
@@ -68,27 +72,15 @@ app.post("/",function(req,res){
           name: itemname
       });
 
-      if(listName==="MORWAL"){
+     
         i.save();
-
         res.redirect("/");
-      }else{
-          List.findOne({name:listName},function(err,foundlist){
-                foundlist.itemss.push(i);
-                foundlist.save();
-                res.redirect("/"+listName);
-          })
       }
-
-
-    
-});
+);
 
 app.post("/delete",function(req,res){
     const id=req.body.delete;
-    const listname=req.body.listname;
 
-    if(listname==="MORWAL"){
         Item.findByIdAndRemove({_id:id},function(err){
             if(err){
                 console.log("error");
@@ -97,13 +89,7 @@ app.post("/delete",function(req,res){
                 res.redirect("/");
             }
         });
-    }else{
-        List.findOneAndUpdate({name:listname},{$pull:{itemss:{_id:id}}},function(err,found){
-            if(!err){
-                res.redirect("/"+listname);
-            }
-        });
-    }
+    
     
     
 });

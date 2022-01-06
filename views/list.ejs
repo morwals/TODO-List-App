@@ -11,7 +11,7 @@
 <main class="main">
     <div class="cont">
 
-        <h1><%= kindofday %></h1>
+        <h1><%= heading  %></h1>
         <ul>
             
         </ul>
@@ -22,14 +22,14 @@
                 <input type="checkbox" name="delete" value="<%= item._id %>" onChange="this.form.submit()">
                 <p><%= item.name %></p>
             </div>
-                <input type="hidden" name="listname" value="<%= kindofday %>">
+                <input type="hidden" name="listname">
         </form>
         <% }) %>
     </div>
 
         <form class="add_inp"action="/" method="post">
             <input type="text" name="additem" placeholder="Add New Item">
-            <button type="submit" name="btn" value="<%= kindofday %>">+</button>
+            <button type="submit" name="btn">+</button>
         </form>
 </div>
     

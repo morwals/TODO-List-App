@@ -2,7 +2,7 @@
 body{
     margin: 0%;
     padding: 0%;
-    background-color: #283d3b; 
+    background-color: #eeeeee; 
   }
 
 .cont{
@@ -14,11 +14,10 @@ body{
 }
 
 h1{
-    background-color: yellowgreen;
+    background-color: rgb(8, 26, 53);
     color: cornsilk;
     text-align: center;
     box-shadow: 2px 3px 8px 0px rgba(0,0,0,0.18);
-    border-radius: 10px;
 }
 
 
@@ -33,11 +32,14 @@ h1{
     border-radius: 10px;
     border: 1px solid black;
     margin: 10px;
-    background-color: grey;
+    background-color: rgba(76, 212, 99, 0.781);
     color: white;
     box-shadow: 2px 3px 8px 0px rgba(0,0,0,0.18);
     display: flex;
+}
 
+.y:hover{
+  background-color: rgba(104, 101, 101, 0);
 }
 
 input:checked+p {
@@ -54,7 +56,8 @@ p {
   padding: 20px;
   font-size: 20px;
   font-weight: 200;
-  color: #00204a;
+  font-family: sans-serif;
+  color: #ffffff;
 }
 
 .form {
@@ -67,11 +70,16 @@ button {
   height: 50px;
   min-width: fit-content;
   min-height: fit-content;
-  border-radius: 9px;
+  border-radius: 30px;
   border: none;
-  background-color: lightgreen;
+  background-color: rgb(9, 116, 84);
   box-shadow: 2px 3px 8px 0px rgba(0,0,0,0.18);
+  color: white;
   margin-left: 5px;
+}
+
+button:hover{
+  background-color: rgb(4, 163, 97);
 }
 
 .add_inp{
@@ -84,7 +92,7 @@ input[type="text"] {
   text-align: center;
   height: 60px;
   top: 10px;
-  border: black;
+  border: 1px solid gray;
   border-radius: 5px;
   background: white;
   font-size: 20px;
