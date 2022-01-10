@@ -3,6 +3,5 @@ This app is used to make a list of your daily tasks and improve your productivit
 
 Developed using Express.js , NodeJs ,mongoDB ,and EJS as the view engine.
 
-link : https://salty-headland-92342.herokuapp.com/
 
 ###################################################################################
